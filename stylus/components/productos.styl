@@ -48,9 +48,13 @@ flex-direction:column;
 .Producto__Texto__botones{
 	margin 1em 0
 }
+.Producto__Contenedor{
+padding:0;
+}
 @media(min-width:870px){
 .Producto__Contenedor:nth-child(even) {
 	flex-direction:row-reverse
+	padding-left 5em
 	.Producto__Texto__botones{
 		float left
 	}
@@ -58,6 +62,7 @@ flex-direction:column;
 .Producto__Contenedor:nth-child(odd) {
 	background: #f6f6f6;
 	flex-direction row
+	padding-right:5em;
 	.Producto__Texto__botones{
 		float right
 	}

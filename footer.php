@@ -2,6 +2,7 @@
 	<div class="container">
 		<section class="Links">
 			<div class="Menus">
+			node_modules/
 				<div class="Menus__Titulo">
 					<p>Progress ERP</p>
 				</div>
@@ -31,10 +32,10 @@
 					<p>SUSCRIBETE AL NEWSLETTER</p>
 				</div>
 				<div class="Subscripcion__descripcion">
-					<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+					<p><?php the_field('texto_newsletter','option')?></p>
 				</div>
 				<div class="Subcsripcion__Formulario">
-					<form action="#">
+					<form action="<?php the_field('newsletter_link','option')?>">
 						<input type="email" placeholder="tucorreo@xxx.com">
 						<button>Enviar</button>
 					</form>
@@ -42,7 +43,7 @@
 			</div>
 		</section>
 		<section class="Copyleft">
-			<p>Copyleft 2016.  Progress ERP | Algunos Derechos Reservados | Diseño: zonapro.us</p>
+			<p><?php the_field('copyleft','options')?></p>
 		</section>
 	</div>
 </footer>

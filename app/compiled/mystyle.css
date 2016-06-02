@@ -534,7 +534,7 @@ body {
   z-index: 2;
 }
 .ContenidoDestacado__descripcion img {
-  margin-right: 2em;
+  margin-right: 0;
 }
 .ContenidoDestacado__descripcion p {
   color: #0c5380;
@@ -546,34 +546,23 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .ContenidoDestacado__descripcion a {
-  margin-left: 2em;
+  margin-left: 0;
   color: #0c5380;
   border: solid 2px #0c5380;
   padding: 0.1em 1em;
-  margin-left: 2em;
 }
 .ContenidoDestacado__descripcion a:hover,
 .ContenidoDestacado__descripcion a:focus {
   text-decoration: none;
 }
 .ContenidoDestacado__descripcion .circle {
-  width: 30px;
-  height: 30px;
-  background: #008000;
-  border-radius: 50%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 1em;
-  color: #fff;
+  display: none;
 }
 .ContenidoDestacado__fondo {
   position: absolute;
@@ -582,6 +571,37 @@ body {
   background: #f7f7f7;
   top: 10%;
   z-index: 1;
+}
+@media (min-width: 830px) {
+  .ContenidoDestacado__descripcion img {
+    margin-right: 2em;
+  }
+  .ContenidoDestacado__descripcion p {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .ContenidoDestacado__descripcion a {
+    margin-left: 2em;
+  }
+  .ContenidoDestacado__descripcion .circle {
+    width: 30px;
+    height: 30px;
+    background: #008000;
+    border-radius: 50%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 1em;
+    color: #fff;
+  }
 }
 .Beneficio__Contenido {
   display: -webkit-box;
@@ -723,12 +743,16 @@ a.cotizar {
 .Producto__Texto__botones {
   margin: 1em 0;
 }
+.Producto__Contenedor {
+  padding: 0;
+}
 @media (min-width: 870px) {
   .Producto__Contenedor:nth-child(even) {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
+    padding-left: 5em;
   }
   .Producto__Contenedor:nth-child(even) .Producto__Texto__botones {
     float: left;
@@ -739,6 +763,7 @@ a.cotizar {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    padding-right: 5em;
   }
   .Producto__Contenedor:nth-child(odd) .Producto__Texto__botones {
     float: right;

@@ -38,6 +38,7 @@ endwhile;
 
 endif;
 ?>
+<div class="clearfix"></div>
 <div class="Producto__Texto__botones">
 	<a class="masFuncionalidades" href="<?=$this->linkF?>">Ver Más Funcionalidades</a>
 	<a class="cotizar" href="<?=$this->linkC?>">Cotizar</a>

@@ -167,7 +167,7 @@ if(!function_exists('sendEmail')){
 	$subject="{$nombre} les Contacta desde la Web";
 	$mensajeEmail = '<html><body>';
 	$mensajeEmail.="<p><b>La persona de nombre:</b>{$nombre}</p><p><b>Empresa:</b>{$empresa}</p><p><b>telefono:</b>{$telefono}</p><p><b>email:</b><a href='mailto:{$email}'>{$email}</a></p><p><b>dejo este mensaje en la web:</b></p><p> {$mensaje}</p><p>refiriendose al producto{$producto}</p> ";
-	$mensajeEmail='</body></html>';
+	$mensajeEmail.='</body></html>';
 	$headers = "From: " . strip_tags($email) . "\r\n";
 	$headers .= "Reply-To: ". strip_tags($email) . "\r\n";
 	$headers .= "CC: jorgelsaud@gmail.com\r\n";
